@@ -3,7 +3,7 @@ import {EmployeeService} from '../service/employee.service'
 import {Store} from "@ngrx/store";
 import {AppState} from "../state/app.state";
 import {selectEmployees} from "../state/app.selector";
-import {retrieveEmployees} from "../state/app.actions";
+import {retrieveEmployees, retrieveEmployees2} from "../state/app.actions";
 import {Observable} from "rxjs";
 import {EmployeeModel} from "../model/Employee.model";
 
@@ -31,13 +31,7 @@ export class ListEmployeeComponent implements OnInit {
   }
 
   getEmployeeList() {
-
-    this.appService.getEmployeeList().subscribe((result) => {
-      this.store.dispatch(retrieveEmployees( {employees:result}))
-      this.appService.saveToLocalStorage(result);
-    }) // data from server and put it in store using action and reducer
-
-
+    this.store.dispatch(retrieveEmployees2());
     this.employees=this.store.select(selectEmployees); // get data from store
   }
 }

@@ -35,4 +35,8 @@ export class EmployeeService {
   saveToLocalStorage(result: EmployeeModel[]) {
     localStorage.setItem('employees', JSON.stringify(result))
   }
+
+  getEmployeesFromLocalStorage():EmployeeModel[] {
+    return JSON.parse(localStorage.getItem('employees'));
+  }
 }

@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5fec51c-ed4c-4a1f-b250-946108841576" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.effects.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../angular-material/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../angular-material/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../angular-material/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/package.json" afterDir="false" />
@@ -29,6 +30,14 @@
       <change beforePath="$PROJECT_DIR$/../../angular-material/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../angular-material/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../angular-material/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/add-update-employee/add-update-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/add-update-employee/add-update-employee.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/list-employee/list-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/list-employee/list-employee.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/service/employee.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/service/employee.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.actions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +45,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1s2529EkdMH0pis4FSOxBUKOQEZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -88,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620057633726</updated>
-      <workItem from="1620057635407" duration="12783000" />
+      <workItem from="1620057635407" duration="16432000" />
     </task>
     <servers />
   </component>

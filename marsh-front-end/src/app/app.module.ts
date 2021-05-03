@@ -18,6 +18,8 @@ import { HeaderComponent } from './header/header.component'
 import {CookieModule} from 'ngx-cookie'
 import {StoreModule} from "@ngrx/store";
 import {allReducer} from "./state/app.reducer";
+import {EffectsModule} from "@ngrx/effects";
+import {AppEffects} from "./state/app.effects";
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import {allReducer} from "./state/app.reducer";
     ReactiveFormsModule,
     FormsModule,
     CookieModule.forRoot(),
-    StoreModule.forRoot(allReducer)
+    StoreModule.forRoot(allReducer),
+    EffectsModule.forRoot([AppEffects])
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true},
