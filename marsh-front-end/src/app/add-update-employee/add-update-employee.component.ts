@@ -6,7 +6,7 @@ import {Store} from "@ngrx/store";
 import {AppState} from "../state/app.state";
 import {selectEmployee} from "../state/app.selector";
 import {EmployeeModel} from "../model/Employee.model";
-import {retrieveEmployees} from "../state/app.actions";
+import {addEmployee, retrieveEmployees, retrieveEmployeesSuccess, updateEmployee} from "../state/app.actions";
 
 @Component({
   selector: 'app-add-update-employee',
@@ -33,7 +33,7 @@ export class AddUpdateEmployeeComponent implements OnInit {
       this.store.select(selectEmployee, {id: this.empId}).subscribe((result) => {
         if (!result) {
           const empsData: EmployeeModel[] = this.appService.getEmployeesFromLocalStorage();
-          empsData && this.store.dispatch(retrieveEmployees({employees: empsData}))
+          empsData && this.store.dispatch(retrieveEmployees())
         }
         if (result) {
           this.employeeFormGroup = new FormGroup({
@@ -45,20 +45,23 @@ export class AddUpdateEmployeeComponent implements OnInit {
         }
 
       })
+    }else {
+      this.employeeFormGroup=this.formBuilder.group({
+        name:[''],
+        address:[''],
+        mobile:[''],
+        email:['']
+      })
     }
   }
 
   addEmployee() {
     if (this.empId) {
-      this.appService.updateEmployee(this.empId, this.employeeFormGroup.value).subscribe((result) => {
-        this.flag = true
-        this.employeeFormGroup.reset({})
-      })
+      this.store.dispatch(updateEmployee({id:this.empId,data:this.employeeFormGroup.value}));
+      this.flag = true
+
     } else {
-      this.appService.addEmployee(this.employeeFormGroup.value).subscribe((result) => {
-        this.flag = true
-        this.employeeFormGroup.reset({})
-      })
+      this.store.dispatch(addEmployee({data:this.employeeFormGroup.value}))
     }
   }
 

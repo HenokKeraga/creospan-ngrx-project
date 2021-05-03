@@ -20,6 +20,7 @@ import {StoreModule} from "@ngrx/store";
 import {allReducer} from "./state/app.reducer";
 import {EffectsModule} from "@ngrx/effects";
 import {AppEffects} from "./state/app.effects";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {AppEffects} from "./state/app.effects";
     FormsModule,
     CookieModule.forRoot(),
     StoreModule.forRoot(allReducer),
-    EffectsModule.forRoot([AppEffects])
+    EffectsModule.forRoot([AppEffects]),
+    StoreDevtoolsModule.instrument({})
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true},

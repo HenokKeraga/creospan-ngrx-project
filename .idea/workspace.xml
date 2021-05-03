@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5fec51c-ed4c-4a1f-b250-946108841576" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.effects.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../angular-material/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../angular-material/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../angular-material/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/package.json" afterDir="false" />
@@ -36,8 +35,11 @@
       <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/add-update-employee/add-update-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/add-update-employee/add-update-employee.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/list-employee/list-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/list-employee/list-employee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/service/employee.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/service/employee.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.effects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.effects.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.selector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/marsh-front-end/src/app/state/app.selector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/db.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620057633726</updated>
-      <workItem from="1620057635407" duration="16432000" />
+      <workItem from="1620057635407" duration="20844000" />
     </task>
     <servers />
   </component>
@@ -116,6 +118,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1620078096145">
+      <screen x="0" y="23" width="1792" height="1019" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1792.1019@0.23.1792.1019" timestamp="1620078096145" />
     <state x="597" y="293" width="598" height="554" key="find.popup" timestamp="1620059886277">
       <screen x="0" y="23" width="1792" height="1019" />
     </state>

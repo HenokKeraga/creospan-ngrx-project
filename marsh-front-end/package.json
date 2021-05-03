@@ -21,6 +21,7 @@
     "@angular/router": "~10.2.0",
     "@ngrx/effects": "^11.1.1",
     "@ngrx/store": "^11.1.1",
+    "@ngrx/store-devtools": "^11.1.1",
     "@nguniversal/express-engine": "9.0.0-rc.2",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",

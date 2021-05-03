@@ -1,14 +1,24 @@
 import {createReducer, on} from "@ngrx/store";
 import {initialState} from "./app.state";
-import {retrieveEmployees} from "./app.actions";
+import {addEmployeeSuccess, retrieveEmployeesSuccess, updateEmployeeSuccess} from "./app.actions";
+import {EmployeeModel} from "../model/Employee.model";
 
 
 const _appReducer = createReducer(initialState,
-  on(retrieveEmployees, (state, action) => {
-      console.log(action)
+  on(retrieveEmployeesSuccess, (state, action) => {
       return {...state, employees: action.employees}
     }
-  )
+  ), on(updateEmployeeSuccess, (state, action) => {
+
+    const modifiedEmployeesList: EmployeeModel[] = state.employees.filter(emp => emp.id !== action.emp.id)
+    modifiedEmployeesList.push(action.emp)
+
+    return {...state, employees: modifiedEmployeesList}
+  }),
+  on(addEmployeeSuccess, (state, action) => {
+
+    return {...state,employees:[...state.employees,action.emp]}
+  })
 )
 
 

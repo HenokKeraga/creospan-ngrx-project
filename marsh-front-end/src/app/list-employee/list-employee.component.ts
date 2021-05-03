@@ -3,7 +3,7 @@ import {EmployeeService} from '../service/employee.service'
 import {Store} from "@ngrx/store";
 import {AppState} from "../state/app.state";
 import {selectEmployees} from "../state/app.selector";
-import {retrieveEmployees, retrieveEmployees2} from "../state/app.actions";
+import {retrieveEmployeesSuccess, retrieveEmployees} from "../state/app.actions";
 import {Observable} from "rxjs";
 import {EmployeeModel} from "../model/Employee.model";
 
@@ -31,7 +31,7 @@ export class ListEmployeeComponent implements OnInit {
   }
 
   getEmployeeList() {
-    this.store.dispatch(retrieveEmployees2());
+    this.store.dispatch(retrieveEmployees());
     this.employees=this.store.select(selectEmployees); // get data from store
   }
 }
