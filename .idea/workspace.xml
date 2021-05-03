@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b5fec51c-ed4c-4a1f-b250-946108841576" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../angular-material/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../angular-material/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../angular-material/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../angular-material/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../angular-material/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../angular-material/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../angular-material/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../angular-material/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../angular-material/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../angular-material/src/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1s2529EkdMH0pis4FSOxBUKOQEZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/marsh-front-end/node_modules/typescript/lib" />
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="E2E Tests (marsh-front-end)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/marsh-front-end/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/marsh-front-end/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5fec51c-ed4c-4a1f-b250-946108841576" name="Default Changelist" comment="" />
+      <created>1620057633726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620057633726</updated>
+      <workItem from="1620057635407" duration="12783000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="597" y="293" width="598" height="554" key="find.popup" timestamp="1620059886277">
+      <screen x="0" y="23" width="1792" height="1019" />
+    </state>
+    <state x="597" y="293" width="598" height="554" key="find.popup/0.23.1792.1019@0.23.1792.1019" timestamp="1620059886277" />
+    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup" timestamp="1620059860534">
+      <screen x="0" y="23" width="1792" height="1019" />
+    </state>
+    <state x="561" y="248" width="670" height="676" key="search.everywhere.popup/0.23.1792.1019@0.23.1792.1019" timestamp="1620059860534" />
+  </component>
+</project>

@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <h1>Register User</h1>
+</div>
+
+<form [formGroup]="registerFormGroup" (ngSubmit)="registerUser()">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Enter Name" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" placeholder="Enter Address"  formControlName="password">
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" placeholder="Enter Email"  formControlName="email">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

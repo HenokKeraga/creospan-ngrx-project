@@ -1,0 +1,72 @@
+{
+  "employee": [
+    {
+      "name": "rohit",
+      "address": "Chicago IL",
+      "mobile": "111111",
+      "email": "test3@test3.com",
+      "id": 3
+    },
+    {
+      "name": "rohit",
+      "address": "chicago2",
+      "mobile": "4444",
+      "email": "4@44.com",
+      "id": 4
+    },
+    {
+      "name": "Jason123",
+      "address": "Chicago IL123",
+      "mobile": "33333333123",
+      "email": "test3@test3.com123",
+      "id": 5
+    },
+    {
+      "name": "Pat2444",
+      "address": "Chicago IL",
+      "mobile": "22222222",
+      "email": "test2@test2.com",
+      "id": 6
+    },
+    {
+      "name": "kjhj",
+      "address": "jh",
+      "mobile": "465456564564",
+      "email": "r@hgfhg.com",
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "name": "test",
+      "password": "test",
+      "email": "test",
+      "token": "test",
+      "roles": [
+        "user"
+      ],
+      "id": 1
+    },
+    {
+      "name": "test1",
+      "password": "test1",
+      "email": "test1",
+      "token": "test1",
+      "roles": [
+        "user"
+      ],
+      "id": 2
+    },
+    {
+      "name": "test3",
+      "password": "test3",
+      "email": "test3",
+      "token": "test3",
+      "roles": [
+        "user",
+        "admin"
+      ],
+      "id": 3
+    }
+  ]
+}
