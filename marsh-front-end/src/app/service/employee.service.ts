@@ -24,8 +24,8 @@ export class EmployeeService {
     return this.http.post(this.EMP_URL, data)
   }
 
-  updateEmployee(id, data): Observable<any> {
-    return this.http.put(`${this.EMP_URL}/${id}`, data)
+  updateEmployee(id, data): Observable<EmployeeModel> {
+    return this.http.put<EmployeeModel>(`${this.EMP_URL}/${id}`, data)
   }
 
   getEmployeeByID(id): Observable<EmployeeModel> {
@@ -38,5 +38,9 @@ export class EmployeeService {
 
   getEmployeesFromLocalStorage():EmployeeModel[] {
     return JSON.parse(localStorage.getItem('employees'));
+  }
+
+  removeEmployeesFromLocalStorage() {
+    localStorage.setItem('employees', '')
   }
 }

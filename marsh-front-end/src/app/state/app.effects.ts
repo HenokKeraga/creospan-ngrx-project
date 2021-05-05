@@ -21,14 +21,16 @@ export class AppEffects {
 
   loadEmployees$ = createEffect(() => this.action$.pipe(
     ofType(retrieveEmployees), exhaustMap(() => {
-      return this.appServices.getEmployeeList().pipe(map(data => retrieveEmployeesSuccess({employees:data})))
+      return this.appServices.getEmployeeList().pipe(map(data => {
+        this.appServices.saveToLocalStorage(data)
+        return retrieveEmployeesSuccess({employees:data})}))
     })
   ))
 
   updateEmployee$=createEffect(()=>{
     return this.action$.pipe(ofType(updateEmployee),mergeMap(action=>{
       return this.appServices.updateEmployee(action.id,action.data).pipe(map((employee:EmployeeModel)=>{
-          this.router.navigate(['/list'])
+      //    this.router.navigate(['/list'])
           return updateEmployeeSuccess({emp:employee})
         }))
     }))

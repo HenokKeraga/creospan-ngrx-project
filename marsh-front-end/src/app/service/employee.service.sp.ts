@@ -2,10 +2,12 @@ import {TestBed} from '@angular/core/testing'
 
 import {EmployeeService} from './employee.service'
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing'
+import {HttpBackend} from "@angular/common/http";
 
 describe('AppService', () => {
   let appService: EmployeeService
   let httpMock: HttpTestingController
+  let backend:HttpBackend
 
   const data = {
     employee: [
@@ -42,6 +44,7 @@ describe('AppService', () => {
     })
     appService = TestBed.inject(EmployeeService)
     httpMock = TestBed.inject(HttpTestingController)
+    backend=TestBed.inject(HttpBackend)
   })
 
   it('should be created', () => {

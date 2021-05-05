@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit} from '@angular/core'
+import {Component, OnChanges, OnDestroy, OnInit} from '@angular/core'
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms'
 import {EmployeeService} from '../service/employee.service'
 import {ActivatedRoute} from '@angular/router'
@@ -13,7 +13,7 @@ import {addEmployee, retrieveEmployees, retrieveEmployeesSuccess, updateEmployee
   templateUrl: './add-update-employee.component.html',
   styleUrls: ['./add-update-employee.component.css']
 })
-export class AddUpdateEmployeeComponent implements OnInit {
+export class AddUpdateEmployeeComponent implements OnInit, OnDestroy {
   flag: boolean
   empId: string
 
@@ -22,20 +22,25 @@ export class AddUpdateEmployeeComponent implements OnInit {
   constructor(private appService: EmployeeService,
               private activatedRoute: ActivatedRoute,
               private formBuilder: FormBuilder,
-              private store: Store<AppState>) {
+              public store: Store<AppState>) {
   }
 
   ngOnInit(): void {
-    this.empId = this.activatedRoute.snapshot.params.id
+    this.activatedRoute.paramMap.subscribe(data => {
+      console.log("data +++ " ,data);
+      this.empId = data.get('id')
+    })
     console.log("emp id", this.empId)
-
     if (this.empId) {
+      console.log("emp id2 ", this.empId)
       this.store.select(selectEmployee, {id: this.empId}).subscribe((result) => {
         if (!result) {
+
           const empsData: EmployeeModel[] = this.appService.getEmployeesFromLocalStorage();
           empsData && this.store.dispatch(retrieveEmployees())
         }
         if (result) {
+          console.log("emp id3 ", result['name'])
           this.employeeFormGroup = new FormGroup({
             name: new FormControl(result['name'] || ''),
             address: new FormControl(result['address'] || ''),
@@ -45,24 +50,34 @@ export class AddUpdateEmployeeComponent implements OnInit {
         }
 
       })
-    }else {
-      this.employeeFormGroup=this.formBuilder.group({
-        name:[''],
-        address:[''],
-        mobile:[''],
-        email:['']
+    } else {
+      this.employeeFormGroup = this.formBuilder.group({
+        name: [''],
+        address: [''],
+        mobile: [''],
+        email: ['']
       })
     }
   }
 
   addEmployee() {
+    console.log(" id +++", this.empId)
+
     if (this.empId) {
-      this.store.dispatch(updateEmployee({id:this.empId,data:this.employeeFormGroup.value}));
+      console.log(" id +++", "if")
+      this.store.dispatch(updateEmployee({id: this.empId, data: this.employeeFormGroup.value}));
       this.flag = true
 
     } else {
-      this.store.dispatch(addEmployee({data:this.employeeFormGroup.value}))
+      console.log(" id +++", "else")
+      this.store.dispatch(addEmployee({data: this.employeeFormGroup.value}))
     }
   }
 
+
+  ngOnDestroy() {
+    this.appService.removeEmployeesFromLocalStorage()
+  }
 }
+
+
