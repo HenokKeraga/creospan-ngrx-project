@@ -3,6 +3,7 @@ import {TestBed} from '@angular/core/testing'
 import {EmployeeService} from './employee.service'
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing'
 import {HttpBackend} from "@angular/common/http";
+import {BaseUrl, EMP_URL} from "./tokens";
 
 describe('AppService', () => {
   let appService: EmployeeService
@@ -34,17 +35,19 @@ describe('AppService', () => {
       }
     ]
   }
+  let url
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [
-        EmployeeService,
+        EmployeeService,{provide: EMP_URL, useValue: BaseUrl}
       ]
     })
     appService = TestBed.inject(EmployeeService)
     httpMock = TestBed.inject(HttpTestingController)
     backend=TestBed.inject(HttpBackend)
+    url=TestBed.inject(EMP_URL)
   })
 
   it('should be created', () => {
@@ -56,7 +59,7 @@ describe('AppService', () => {
       expect(val).toEqual(data)
     })
 
-    const request = httpMock.expectOne(appService.EMP_URL)
+    const request = httpMock.expectOne(url)
     expect(request.request.method).toEqual('GET')
     request.flush(data)
   })

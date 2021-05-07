@@ -21,6 +21,7 @@ import {allReducer} from "./state/app.reducer";
 import {EffectsModule} from "@ngrx/effects";
 import {AppEffects} from "./state/app.effects";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {BaseUrl, EMP_URL} from "./service/tokens";
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    {provide: EMP_URL, useValue: BaseUrl}
   ],
   bootstrap: [AppComponent]
 })

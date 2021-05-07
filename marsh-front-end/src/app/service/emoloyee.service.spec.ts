@@ -1,6 +1,7 @@
 import {EmployeeService} from "./employee.service";
 import {TestBed} from "@angular/core/testing";
 import {HttpClientTestingModule, HttpTestingController, TestRequest} from "@angular/common/http/testing";
+import {BaseUrl, EMP_URL} from "./tokens";
 
 describe("Employee service", () => {
 
@@ -73,23 +74,23 @@ describe("Employee service", () => {
   }
 
   let employeeService: EmployeeService
-  let httpTestingController: HttpTestingController
+  let httpMock: HttpTestingController
+  let url
 
   beforeEach(() => {
 
     TestBed.configureTestingModule({
-      providers: [EmployeeService],
+      providers: [EmployeeService,{provide: EMP_URL, useValue: BaseUrl}],
       imports: [HttpClientTestingModule]
-
     })
 
     employeeService = TestBed.inject(EmployeeService)
-    httpTestingController = TestBed.inject(HttpTestingController)
-
+    httpMock = TestBed.inject(HttpTestingController)
+    url=TestBed.inject(EMP_URL)
 
   })
 
-  it('should retrieve all employees ', () => {
+  fit('should retrieve all employees ', () => {
     employeeService.getEmployeeList().subscribe(
       employees => {
         expect(employees).toBeTruthy()
@@ -98,7 +99,7 @@ describe("Employee service", () => {
       }
     )
 
-   httpTestingController.expectOne(employeeService.EMP_URL).flush(Object.values(data.employee))
+    httpMock.expectOne(url).flush(Object.values(data.employee))
 
   })
 

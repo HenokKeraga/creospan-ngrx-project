@@ -1,15 +1,15 @@
-import {Injectable} from '@angular/core'
+import {Inject, inject, Injectable} from '@angular/core'
 import {HttpClient} from '@angular/common/http'
 import {Observable} from 'rxjs'
 import {EmployeeModel} from "../model/Employee.model";
+import {EMP_URL} from "./tokens";
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-  EMP_URL = 'http://localhost:3000/employee'
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,@Inject(EMP_URL) private EMP_URL) {
   }
 
   getEmployeeList(): Observable<any> {
